@@ -2,9 +2,11 @@ import streamlit as st
 from google import genai
 
 client = genai.Client(
-    api_key="YOUR_API_KEY",
+    client = genai.Client(
+    api_key=st.secrets["GOOGLE_API_KEY"],
     vertexai=False
-)
+),
+   
 
 st.set_page_config(page_title="AI Chatbot", page_icon="🤖")
 
